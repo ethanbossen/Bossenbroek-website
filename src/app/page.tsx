@@ -43,9 +43,9 @@ export default function Home() {
                 </div>
             </AppShell.Header>
             <AppShell.Navbar p="md">
-                <Link href="/">Hello</Link>
-                <Link href="/">Hello</Link>
-                <Link href="/">Hello</Link>
+                <Link href="./Vinyl">Vinyl</Link>
+                <Link href="./Blog">Blog</Link>
+                <Link href="./Resume">Resume</Link>
 
             </AppShell.Navbar>
             <AppShell.Main>
