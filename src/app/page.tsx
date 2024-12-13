@@ -26,12 +26,6 @@ export default function Home() {
         >
             <AppShell.Header>
                 <div className="flex gap-4 pt-2 pl-3">
-                <Burger
-                    opened={mobileOpened}
-                    onClick={toggleMobile}
-                    hiddenFrom="sm"
-                    size="md"
-                />
                 <div className="text-3xl font-bold">Ethan Bossenbroek</div>
                 </div>
             </AppShell.Header>
