@@ -36,7 +36,7 @@ export default function Home() {
                 </div>
             </AppShell.Header>
 
-            <AppShell.Navbar p="md">
+            <AppShell.Navbar p="sm">
                 <NavLink
                     label="Home"
                     component={Link}

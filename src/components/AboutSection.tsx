@@ -5,6 +5,7 @@ const AboutSection = () => {
     return (
         <Container id="about" size="lg" py="xl">
             <Title order={2}>About Me</Title>
+            <div className="pl-2">
             <p className="pt-2 pb-3">
                 Hello! I'm Ethan Bossenbroek, a software developer for
                 <a href='https://whitepine.digital'> White Pine Digital</a> I'm wrapping up college this semester and wil
@@ -20,6 +21,7 @@ const AboutSection = () => {
                 If you want to chat about tech, share a cool album or are just interested in learning more, feel free to
                 reach out!
             </p>
+            </div>
         </Container>
     );
 };

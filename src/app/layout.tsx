@@ -6,8 +6,8 @@ import "@mantine/core/styles.css";
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 
 export const metadata = {
-    title: "My Mantine app",
-    description: "I have followed setup instructions carefully",
+    title: "Ethan Bossenbroek's Site",
+    description: "The website of software developer and hobby guitarist, Ethan Bossenbroek.",
 };
 
 export default function RootLayout({

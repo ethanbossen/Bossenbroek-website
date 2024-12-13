@@ -12,7 +12,7 @@ const Footer = () => {
                 {/* GitHub */}
                 <ActionIcon
                     component="a"
-                    href="https://github.com/your-github-username"
+                    href="https://github.com/ethanbossen"
                     target="_blank"
                     size="lg"
                     variant="outline"
@@ -24,7 +24,7 @@ const Footer = () => {
                 {/* Instagram */}
                 <ActionIcon
                     component="a"
-                    href="https://instagram.com/your-instagram-username"
+                    href="https://instagram.com/ethan.bossenbroek"
                     target="_blank"
                     size="lg"
                     variant="outline"
@@ -36,7 +36,7 @@ const Footer = () => {
                 {/* Discord */}
                 <ActionIcon
                     component="a"
-                    href="https://discord.com/users/your-discord-id"
+                    href="https://discord.com/users/frath.42"
                     target="_blank"
                     size="lg"
                     variant="outline"
@@ -48,7 +48,7 @@ const Footer = () => {
                 {/* Gmail */}
                 <ActionIcon
                     component="a"
-                    href="mailto:your-email@gmail.com"
+                    href="mailto:ethan.bossenbroek@gmail.com"
                     size="lg"
                     variant="outline"
                     aria-label="Email"
