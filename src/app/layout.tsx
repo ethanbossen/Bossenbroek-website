@@ -2,7 +2,7 @@ import "./globals.css";
 // Import styles of packages that you've installed.
 // All packages except `@mantine/hooks` require styles imports
 import "@mantine/core/styles.css";
-
+import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
 
 export const metadata = {
@@ -22,6 +22,7 @@ export default function RootLayout({
         </head>
         <body>
         <MantineProvider>{children}</MantineProvider>
+        <SpeedInsights />
         </body>
         </html>
     );
