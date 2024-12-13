@@ -13,7 +13,7 @@ const AboutSection = () => {
             Next.js and have been trying to get a better understanding of some ML stuff on Huggingface. </p>
             <p className="pb-3">
                 When I&apos;m not tinkering on the computer odds are I&apos;m riffing on my guitars, hunting down new music or
-                hanging out with Murphy (pictured bellow). I&apos;m always up for learning something new, and tend to spend
+                hanging out with Murphy (pictured below). I&apos;m always up for learning something new, and tend to spend
                 most of my time learning everything I can about the hobbies I feel passionate about.
             </p>
             <p className="pb-3">

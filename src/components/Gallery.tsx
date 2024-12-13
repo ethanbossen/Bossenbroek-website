@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { Modal, Card, Title } from "@mantine/core";
 
+type Photo = {
+    title: string;
+    src: string;
+};
+
 const Gallery = () => {
-    const photos = [
+    const photos: Photo[] = [
         { title: "Murphy", src: "/photos/Murphy.jpeg" },
         { title: "Guitar with Amps", src: "/photos/Guitar_with_amps.jpeg" },
         { title: "Nat and Me", src: "/photos/Nat_and_me.jpeg" },
@@ -10,9 +15,9 @@ const Gallery = () => {
     ];
 
     const [opened, setOpened] = useState(false);
-    const [selectedPhoto, setSelectedPhoto] = useState(null);
+    const [selectedPhoto, setSelectedPhoto] = useState<Photo | null>(null);
 
-    const openModal = (photo) => {
+    const openModal = (photo: Photo) => {
         setSelectedPhoto(photo);
         setOpened(true);
     };
