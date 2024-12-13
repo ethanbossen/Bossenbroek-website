@@ -1,11 +1,13 @@
 "use client";
 
 import React from "react";
-import "./globals.css";
-import { AppShell, Burger } from "@mantine/core";
+import { AppShell, Burger, NavLink } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Link from "next/link";
 import HomeSection from "@/components/HomeSection";
+import AboutSection from "@/components/AboutSection";
+import ServicesSection from "@/components/Gallery";
+import ContactSection from "@/components/Footer";
 
 export default function Home() {
     const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
@@ -20,40 +22,54 @@ export default function Home() {
                 collapsed: { mobile: !mobileOpened, desktop: !desktopOpened },
             }}
             padding="md"
+            className="accent-blue-400"
         >
             <AppShell.Header>
-                <div className="flex items-end mt-4 w-auto justify-between">
-                    <div className="flex items-center pl-5">
-                        <Burger
-                            opened={mobileOpened}
-                            onClick={toggleMobile}
-                            hiddenFrom="sm"
-                            size="sm"
-                        />
-                        <Burger
-                            opened={desktopOpened}
-                            onClick={toggleDesktop}
-                            visibleFrom="sm"
-                            size="sm"
-                        />
-                        <Link href="/" className="font-bold text-3xl pl-5 text-purple-800">
-                            Ethan Bossenbroek
-                        </Link>
-                    </div>
+                <div className="flex gap-4 pt-2 pl-3">
+                <Burger
+                    opened={mobileOpened}
+                    onClick={toggleMobile}
+                    hiddenFrom="sm"
+                    size="md"
+                />
+                <div className="text-3xl font-bold">Ethan Bossenbroek</div>
                 </div>
             </AppShell.Header>
+
             <AppShell.Navbar p="md">
-                <Link href="./Vinyl">Vinyl</Link>
-                <Link href="./Blog">Blog</Link>
-                <Link href="./Resume">Resume</Link>
-
+                <NavLink
+                    label="Home"
+                    component={Link}
+                    href="#home"
+                    onClick={() => toggleMobile()}
+                />
+                <NavLink
+                    label="About"
+                    component={Link}
+                    href="#about"
+                    onClick={() => toggleMobile()}
+                />
+                <NavLink
+                    label="Photos"
+                    component={Link}
+                    href="#gallery"
+                    onClick={() => toggleMobile()}
+                />
+                <NavLink
+                    label="Contact"
+                    component={Link}
+                    href="#footer"
+                    onClick={() => toggleMobile()}
+                />
             </AppShell.Navbar>
-            <AppShell.Main>
-               <div className="flex items-center justify-center w-full bg-gradient-to-b from-purple-900 via-purple-800 to-purple-600">
-                  <HomeSection/>
-               </div>
 
+            <AppShell.Main>
+                <HomeSection />
+                <AboutSection />
+                <ServicesSection />
+                <ContactSection />
             </AppShell.Main>
         </AppShell>
     );
 }
+
