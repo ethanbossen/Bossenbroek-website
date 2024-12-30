@@ -1,6 +1,5 @@
 import "./globals.css";
-// Import styles of packages that you've installed.
-// All packages except `@mantine/hooks` require styles imports
+import { Analytics } from "@vercel/analytics/react"
 import "@mantine/core/styles.css";
 import { SpeedInsights } from "@vercel/speed-insights/next"
 import { ColorSchemeScript, MantineProvider } from "@mantine/core";
@@ -23,6 +22,7 @@ export default function RootLayout({
         <body>
         <MantineProvider>{children}</MantineProvider>
         <SpeedInsights />
+        <Analytics />
         </body>
         </html>
     );
