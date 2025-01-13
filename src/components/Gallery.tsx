@@ -30,18 +30,18 @@ const Gallery = () => {
     return (
         <div id="gallery" className="flex flex-col gap-2 pt-2">
             <Title order={2}>Photo Gallery</Title>
-            <div className="flex flex-wrap gap-4 pt-4 justify-center">
+            <div className="flex gap-4 pt-4 justify-center">
                 {photos.map((photo, index) => (
                     <div
                         key={index}
-                        className="w-1/5 cursor-pointer"
+                        className="w-full sm:w-1/3  lg:w-1/5 cursor-pointer"
                         onClick={() => openModal(photo)}
                     >
                         <Card
                             shadow="sm"
                             radius="md"
                             withBorder
-                            className="h-40 flex justify-center items-center"
+                            className="aspect-square flex justify-center items-center"
                         >
                             <img
                                 src={photo.src}
@@ -53,24 +53,25 @@ const Gallery = () => {
                 ))}
             </div>
 
-            <Modal
-                opened={opened}
-                onClose={closeModal}
-                size="auto"
-                centered
-            >
-                {selectedPhoto && (
-                    <div className="flex justify-center items-center w-full h-full">
-                        <img
-                            src={selectedPhoto.src}
-                            alt={selectedPhoto.title}
-                            className="max-w-full max-h-[90vh] rounded-md"
-                        />
-                    </div>
-                )}
-            </Modal>
-        </div>
-    );
+    <Modal
+        opened={opened}
+        onClose={closeModal}
+        size="auto"
+        centered
+    >
+        {selectedPhoto && (
+            <div className="flex justify-center items-center w-full h-full">
+                <img
+                    src={selectedPhoto.src}
+                    alt={selectedPhoto.title}
+                    className="max-w-full max-h-[90vh] rounded-md"
+                />
+            </div>
+        )}
+    </Modal>
+</div>
+)
+    ;
 };
 
 export default Gallery;
