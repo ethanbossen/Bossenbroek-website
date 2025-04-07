@@ -7,18 +7,13 @@ const AboutSection = () => {
             <Title order={2}>About Me</Title>
             <div className="pl-2">
             <p className="pt-2 pb-3">
-                Hello! I&apos;m Ethan Bossenbroek, a software developer for
-                <a href='https://whitepine.digital'> White Pine Digital</a> I&apos;m wrapping up college this semester and wil
-                be done this May. I will graduate with a B.S. in Computer Science. I spend a lot of my time working with Go
-            Next.js and have been trying to get a better understanding of some ML stuff on Huggingface. </p>
-            <p className="pb-3">
-                When I&apos;m not tinkering on the computer odds are I&apos;m riffing on my guitars, hunting down new music or
-                hanging out with Murphy (pictured below). I&apos;m always up for learning something new, and tend to spend
-                most of my time learning everything I can about the hobbies I feel passionate about.
+                Hey there! I'm Ethan Bossenbroek — a soon-to-be Computer Science graduate wrapping up my final semester of college this May.
             </p>
             <p className="pb-3">
-                If you want to chat about tech, share a cool album or are just interested in learning more, feel free to
-                reach out!
+                Outside of coding, you’ll usually find me playing guitar, digging for hidden music gems, or hanging out with my cat Murphy. I love diving deep into new interests and tend to go all-in on the hobbies I’m passionate about.
+            </p>
+            <p className="pb-3">
+                Whether you want to chat about tech, geek out over music, or just say hey — don’t hesitate to reach out!
             </p>
             </div>
         </Container>
