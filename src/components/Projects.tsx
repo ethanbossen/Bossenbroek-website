@@ -30,19 +30,19 @@ const Projects = () => {
       <Title order={2} mb="md">Projects</Title>
       <SimpleGrid cols={2} spacing="lg">
         {repos.map((repo) => (
-            <div key={repo.title}>
-          <Anchor
-            href={repo.link}
-            target="_blank"
-            rel="noopener noreferrer"
-            style={{ textDecoration: "none" }}
-          >
-            <Card shadow="sm" padding="lg" radius="md" withBorder>
-              <Title order={4} mb="xs">{repo.title}</Title>
-              <Text mb="sm">{repo.description}</Text>
-            </Card>
-          </Anchor>
-            </div>
+          <div key={repo.title} style={{ height: '100%' }}>
+            <Anchor
+              href={repo.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", height: "100%", display: "block" }}
+            >
+              <Card shadow="sm" padding="lg" radius="md" withBorder style={{ height: "100%", display: "flex", flexDirection: "column" }}>
+                <Title order={4} mb="xs">{repo.title}</Title>
+                <Text mb="sm" style={{ flexGrow: 1 }}>{repo.description}</Text>
+              </Card>
+            </Anchor>
+          </div>
         ))}
       </SimpleGrid>
     </Container>
