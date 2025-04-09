@@ -45,6 +45,12 @@ export default function Home() {
                     onClick={() => toggleMobile()}
                 />
                 <NavLink
+                    label="Projects"
+                    component={Link}
+                    href="#projects"
+                    onClick={() => toggleMobile()}
+                />
+                <NavLink
                     label="Photos"
                     component={Link}
                     href="#gallery"
