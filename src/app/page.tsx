@@ -8,6 +8,7 @@ import HomeSection from "@/components/HomeSection";
 import AboutSection from "@/components/AboutSection";
 import ServicesSection from "@/components/Gallery";
 import ContactSection from "@/components/Footer";
+import Projects from "@/components/Projects";
 
 export default function Home() {
     const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
@@ -17,7 +18,7 @@ export default function Home() {
         <AppShell
             header={{ height: 60 }}
             navbar={{
-                width: 300,
+                width: 125,
                 breakpoint: "sm",
                 collapsed: { mobile: !mobileOpened, desktop: !desktopOpened },
             }}
@@ -60,6 +61,7 @@ export default function Home() {
             <AppShell.Main>
                 <HomeSection />
                 <AboutSection />
+                <Projects />
                 <ServicesSection />
                 <ContactSection />
             </AppShell.Main>
