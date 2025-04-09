@@ -28,15 +28,21 @@ const Projects = () => {
   return (
     <Container id="projects" size="lg" py="xl">
       <Title order={2} mb="md">Projects</Title>
-      <SimpleGrid cols={2} spacing="lg" breakpoints={[{ maxWidth: 'sm', cols: 1 }]}>
+      <SimpleGrid cols={2} spacing="lg">
         {repos.map((repo) => (
-          <Card key={repo.title} shadow="sm" padding="lg" radius="md" withBorder>
-            <Title order={4} mb="xs">{repo.title}</Title>
-            <Text mb="sm">{repo.description}</Text>
-            <Anchor href={repo.link} target="_blank" rel="noopener noreferrer">
-              View Repository
-            </Anchor>
-          </Card>
+            <div key={repo.title}>
+          <Anchor
+            href={repo.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ textDecoration: "none" }}
+          >
+            <Card shadow="sm" padding="lg" radius="md" withBorder>
+              <Title order={4} mb="xs">{repo.title}</Title>
+              <Text mb="sm">{repo.description}</Text>
+            </Card>
+          </Anchor>
+            </div>
         ))}
       </SimpleGrid>
     </Container>
