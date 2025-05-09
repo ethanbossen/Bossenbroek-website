@@ -13,7 +13,7 @@ const AboutSection = () => {
             <p className="pb-3">
                 I have many hobbies that you can learn more about through my blogs page that I will be adding to the site soon.
                 I play guitar, collect guitar pedals and love listening to music. I also enjoy video games and collect comic books and
-                physical music media. For music, some of my favorite generes are Heavy Metal, Rock, and more. I'll talk more about that in
+                physical music media. For music, some of my favorite generes are Heavy Metal, Rock, and more. I&apos;ll talk more about that in
                 my blog posts when I get the motivation to write them.
             </p>
             <p className="pb-3">
