@@ -6,7 +6,6 @@ import { useDisclosure } from "@mantine/hooks";
 import Link from "next/link";
 import HomeSection from "@/components/HomeSection";
 import AboutSection from "@/components/AboutSection";
-import ServicesSection from "@/components/Gallery";
 import ContactSection from "@/components/Footer";
 import Projects from "@/components/Projects";
 
@@ -51,10 +50,12 @@ export default function Home() {
                     onClick={() => toggleMobile()}
                 />
                 <NavLink
-                    label="Photos"
-                    component={Link}
-                    href="#gallery"
-                    onClick={() => toggleMobile()}
+                    label="Blogs"
+                    component="button"
+                    disabled
+                    onClick={(e) =>
+                        e.preventDefault()}
+                    style={{ cursor: "not-allowed", opacity: 0.5 }}
                 />
                 <NavLink
                     label="Contact"
@@ -68,7 +69,6 @@ export default function Home() {
                 <HomeSection />
                 <AboutSection />
                 <Projects />
-                <ServicesSection />
                 <ContactSection />
             </AppShell.Main>
         </AppShell>
