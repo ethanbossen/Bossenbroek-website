@@ -4,15 +4,18 @@ import React from "react";
 import { AppShell, Burger, NavLink } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Link from "next/link";
-import HomeSection from "@/components/HomeSection";
-import AboutSection from "@/components/AboutSection";
-import ContactSection from "@/components/Footer";
-import Projects from "@/components/Projects";
+import BlogsDirectory from "@/components/BlogsDirectory";
 
-export default function Home() {
+export default function BlogsPage() {
     const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
     const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure(true);
 
+    const blogsProp = [
+        {
+            title: "Coming Soon",
+            desc: "Blog posts will be added shortly. Stay tuned!",
+        },
+    ];
     return (
         <AppShell
             header={{ height: 60 }}
@@ -26,7 +29,7 @@ export default function Home() {
         >
             <AppShell.Header>
                 <div className="flex gap-4 pt-2 pl-3">
-                <div className="text-3xl font-bold">Ethan Bossenbroek</div>
+                    <div className="text-3xl font-bold">Ethan Bossenbroek</div>
                 </div>
             </AppShell.Header>
 
@@ -34,19 +37,19 @@ export default function Home() {
                 <NavLink
                     label="Home"
                     component={Link}
-                    href="#home"
+                    href="/"
                     onClick={() => toggleMobile()}
                 />
                 <NavLink
                     label="About"
                     component={Link}
-                    href="#about"
+                    href="/#about"
                     onClick={() => toggleMobile()}
                 />
                 <NavLink
                     label="Projects"
                     component={Link}
-                    href="#projects"
+                    href="/#projects"
                     onClick={() => toggleMobile()}
                 />
                 <NavLink
@@ -58,16 +61,13 @@ export default function Home() {
                 <NavLink
                     label="Contact"
                     component={Link}
-                    href="#footer"
+                    href="/#footer"
                     onClick={() => toggleMobile()}
                 />
             </AppShell.Navbar>
 
             <AppShell.Main>
-                <HomeSection />
-                <AboutSection />
-                <Projects />
-                <ContactSection />
+                <BlogsDirectory blogs={blogsProp} />
             </AppShell.Main>
         </AppShell>
     );
