@@ -25,7 +25,14 @@ export default function Home() {
             className="accent-blue-400"
         >
             <AppShell.Header>
-                <div className="flex gap-4 pt-2 pl-3">
+                <div className="flex items-center gap-4 pt-2 pl-3 h-full">
+                    <Burger
+                        opened={mobileOpened}
+                        onClick={toggleMobile}
+                        hiddenFrom="sm"
+                        size="sm"
+                        className="ml-3"
+                    />
                 <div className="text-3xl font-bold">Ethan Bossenbroek</div>
                 </div>
             </AppShell.Header>
