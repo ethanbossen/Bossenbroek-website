@@ -1,22 +1,13 @@
 "use client";
 
 import React from "react";
-import { AppShell, Burger, NavLink } from "@mantine/core";
+import { AppShell, NavLink } from "@mantine/core";
 import { useDisclosure } from "@mantine/hooks";
 import Link from "next/link";
-import BlogsDirectory from "@/components/BlogsDirectory";
 
-export default function BlogsPage() {
+export default function IntroductionBlogPage() {
     const [mobileOpened, { toggle: toggleMobile }] = useDisclosure();
     const [desktopOpened, { toggle: toggleDesktop }] = useDisclosure(true);
-
-    const blogsProp = [
-        {
-            title: "Introduction",
-            desc: "A more fleshed out about me page with more information about who I am and what I do.",
-            link: "/blogs/introduction",
-        },
-    ];
 
     return (
         <AppShell
@@ -69,9 +60,14 @@ export default function BlogsPage() {
             </AppShell.Navbar>
 
             <AppShell.Main>
-
-                <div className="max-w-4xl mx-auto text-center">
-                    <BlogsDirectory blogs={blogsProp} />
+                <div className="prose max-w-3xl mx-auto">
+                    <h1 className="text-4xl font-bold mb-4 text-center">Introduction</h1>
+                    <p>
+                        Welcome to my first blog!
+                    </p>
+                    <p>
+                        I do not have much to say right now, but keep checking and I will be adding more content soon!
+                    </p>
                 </div>
             </AppShell.Main>
         </AppShell>
