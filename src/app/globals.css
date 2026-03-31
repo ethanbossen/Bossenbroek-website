@@ -3,22 +3,33 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 200, 230, 200;
-  --background-end-rgb: 230, 250, 230;
+  --bg: #FAF7F2;
+  --bg-alt: #F0EBE3;
+  --surface: #E8E0D4;
+  --text: #1C1917;
+  --text-muted: #78716C;
+  --accent: #B45309;
+  --accent-hover: #92400E;
+}
+
+* {
+  scroll-behavior: smooth;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-    to bottom,
-    rgb(var(--background-start-rgb)),
-    rgb(var(--background-end-rgb))
-  );
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(180, 83, 9, 0.15);
 }
 
 @layer utilities {
-  .text-balance {
-    text-wrap: balance;
+  .accent-underline {
+    border-bottom: 2px solid var(--accent);
+    padding-bottom: 2px;
   }
 }

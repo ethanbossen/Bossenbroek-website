@@ -12,13 +12,18 @@
     "@mantine/core": "^7.12.2",
     "@mantine/form": "^7.12.2",
     "@mantine/hooks": "^7.12.2",
+    "@react-three/drei": "^9.122.0",
+    "@react-three/fiber": "^8.18.0",
     "@tabler/icons-react": "^3.24.0",
+    "@types/three": "^0.183.1",
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
     "axios": "^1.8.4",
+    "framer-motion": "^12.38.0",
     "next": "14.2.7",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "three": "^0.183.2"
   },
   "devDependencies": {
     "@types/node": "^20",

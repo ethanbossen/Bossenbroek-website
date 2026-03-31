@@ -1,66 +1,61 @@
-import React from "react";
-import { Container, Title, Group, ActionIcon, Text } from "@mantine/core";
-import { IconBrandGithub, IconBrandInstagram, IconBrandDiscord, IconMail } from "@tabler/icons-react";
+"use client";
 
-const Footer = () => {
-    return (
-        <Container id="footer" size="lg" py="xl" style={{ textAlign: "center" }}>
-            <Title order={3} mb="sm">
-                Connect with Me
-            </Title>
-            <div className="flex gap-2 pt-2 justify-center">
-                {/* GitHub */}
-                <ActionIcon
-                    component="a"
-                    href="https://github.com/ethanbossen"
-                    target="_blank"
-                    size="lg"
-                    variant="outline"
-                    aria-label="GitHub"
-                >
-                    <IconBrandGithub size={24} />
-                </ActionIcon>
+import {
+  IconBrandGithub,
+  IconBrandDiscord,
+  IconMail,
+} from "@tabler/icons-react";
 
-                {/* Instagram */}
-                <ActionIcon
-                    component="a"
-                    href="https://instagram.com/ethan.bossenbroek"
-                    target="_blank"
-                    size="lg"
-                    variant="outline"
-                    aria-label="Instagram"
-                >
-                    <IconBrandInstagram size={24} />
-                </ActionIcon>
+const socials = [
+  {
+    icon: IconBrandGithub,
+    href: "https://github.com/ethanbossen",
+    label: "GitHub",
+  },
+  {
+    icon: IconBrandDiscord,
+    href: "https://discord.com/users/frath.42",
+    label: "Discord",
+  },
+  {
+    icon: IconMail,
+    href: "mailto:ethan.bossenbroek@gmail.com",
+    label: "Email",
+  },
+];
 
-                {/* Discord */}
-                <ActionIcon
-                    component="a"
-                    href="https://discord.com/users/frath.42"
-                    target="_blank"
-                    size="lg"
-                    variant="outline"
-                    aria-label="Discord"
-                >
-                    <IconBrandDiscord size={24} />
-                </ActionIcon>
+export default function Footer() {
+  return (
+    <footer id="contact" className="bg-warm-text text-cream py-20 px-6">
+      <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div>
+          <p className="font-serif text-2xl mb-3">Ethan Bossenbroek</p>
+          <p className="text-cream-dark/60 leading-relaxed">
+            Software engineer in Michigan. Always happy to talk guitars or code.
+          </p>
+        </div>
 
-                {/* Gmail */}
-                <ActionIcon
-                    component="a"
-                    href="mailto:ethan.bossenbroek@gmail.com"
-                    size="lg"
-                    variant="outline"
-                    aria-label="Email"
-                >
-                    <IconMail size={24} />
-                </ActionIcon>
-            </div>
-            <Text mt="md" color="dimmed" size="sm">
-                © {new Date().getFullYear()} Ethan Bossenbroek. All rights reserved.
-            </Text>
-        </Container>
-    );
-};
+        <div className="flex flex-col gap-4 md:items-end md:justify-center">
+          {socials.map(({ icon: Icon, href, label }) => (
+            <a
+              key={label}
+              href={href}
+              target={href.startsWith("mailto") ? undefined : "_blank"}
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 text-cream-dark/60 hover:text-cream"
+            >
+              <Icon size={18} stroke={1.5} />
+              <span className="text-sm">{label}</span>
+            </a>
+          ))}
+        </div>
+      </div>
 
-export default Footer;
+      <div className="max-w-5xl mx-auto mt-16 pt-6 border-t border-cream/10">
+        <p className="text-xs text-cream-dark/30">
+          &copy; {new Date().getFullYear()} Ethan Bossenbroek
+        </p>
+      </div>
+    </footer>
+  );
+}
